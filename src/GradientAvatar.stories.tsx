@@ -1,5 +1,3 @@
-// Button.stories.ts|tsx
-
 import type { Meta } from "@storybook/react";
 
 import { GradientAvatar, GradientAvatarProps } from "./GradientAvatar";
@@ -10,9 +8,11 @@ const meta: Meta<typeof GradientAvatar> = {
 
 export default meta;
 
-type Story = (args: GradientAvatarProps) => JSX.Element;
+type Story = (args: GradientAvatarProps) => Element;
 
-export const Default: Story = (args) => <GradientAvatar {...args} />;
+export const Default: any = (args: GradientAvatarProps) => (
+  <GradientAvatar {...args} />
+);
 Default.args = {
   name: "Brandon Sueur",
   gradient: {
@@ -22,13 +22,17 @@ Default.args = {
   },
 };
 
-export const Size: Story = (args) => <GradientAvatar {...args} />;
+export const Size: any = (args: GradientAvatarProps) => (
+  <GradientAvatar {...args} />
+);
 Size.args = {
   name: "Brandon Sueur",
   size: "small",
 };
 
-export const Color: Story = (args) => <GradientAvatar {...args} />;
+export const Color: any = (args: GradientAvatarProps) => (
+  <GradientAvatar {...args} />
+);
 Color.args = {
   name: "Brandon Sueur",
   color: "red",

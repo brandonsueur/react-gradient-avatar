@@ -39,7 +39,7 @@ describe("GradientAvatar", () => {
         name="John Doe"
         size="large"
         gradient={{
-          start: "red",
+          from: "red",
           end: "#cecece",
         }}
       />,
