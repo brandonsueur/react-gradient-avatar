@@ -2,6 +2,11 @@
 
 🌈 **react-gradient-avatar** is a React component that generates beautiful avatars.
 
+
+## Demo
+
+![react-gradient-avatar](https://i.ibb.co/CnskCpz/Frame-1.jpg)
+
 **⏳ actually, work in progress !** Soon available on npm. ♥️
 
 ## Table of Contents
