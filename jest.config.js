@@ -5,7 +5,7 @@ module.exports = {
   moduleFileExtensions: ["ts", "tsx", "js"],
   testPathIgnorePatterns: ["node_modules/"],
   transform: {
-    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
   setupFiles: ["jest-canvas-mock"],
   testMatch: ["**/*.test.(ts|tsx)"],
