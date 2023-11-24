@@ -4,8 +4,6 @@
 
 ![react-gradient-avatar](https://i.ibb.co/CnskCpz/Frame-1.jpg)
 
-**⏳ actually, work in progress !** Soon available on npm. ♥️
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -14,10 +12,10 @@
 
 ## Installation
 
-To install, you can use [npm](https://www.npmjs.com/package/brandonsueur/react-gradient-avatar):
+To install, you can use [npm](https://www.npmjs.com/package/react-gradient-avatar):
 ```shell
-$ npm install --save @brandonsueur/react-gradient-avatar
-$ yarn add @brandonsueur/react-gradient-avatar
+$ npm i react-gradient-avatar
+$ yarn add react-gradient-avatar
 ```
 
 ## Examples
