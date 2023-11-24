@@ -8,17 +8,15 @@ const meta: Meta<typeof GradientAvatar> = {
 
 export default meta;
 
-type Story = (args: GradientAvatarProps) => Element;
-
 export const Default: any = (args: GradientAvatarProps) => (
   <GradientAvatar {...args} />
 );
 Default.args = {
   name: "Brandon Sueur",
   gradient: {
-    from: "red",
+    from: "blue",
     end: "#b91c1c",
-    direction: "to-br",
+    direction: "bottom right",
   },
 };
 
@@ -27,7 +25,7 @@ export const Size: any = (args: GradientAvatarProps) => (
 );
 Size.args = {
   name: "Brandon Sueur",
-  size: "small",
+  size: "xlarge",
 };
 
 export const Color: any = (args: GradientAvatarProps) => (
@@ -35,5 +33,5 @@ export const Color: any = (args: GradientAvatarProps) => (
 );
 Color.args = {
   name: "Brandon Sueur",
-  color: "red",
+  color: "#b91c1c",
 };

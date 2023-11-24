@@ -16,7 +16,7 @@ export interface GradientAvatarProps {
   gradient?: {
     from: string;
     end: string;
-    direction?: "to-br" | "to-tr" | "to-tl" | "to-bl";
+    direction?: "bottom right" | "bottom left" | "top right" | "top left";
   };
   className?: string;
 }
@@ -39,14 +39,10 @@ export const GradientAvatar: React.FC<GradientAvatarProps> = (props) => {
   }) => {
     if (!gradient) return;
 
-    const { from, end, direction = "to-br" } = gradient;
+    const { from, end, direction = "bottom right" } = gradient;
 
-    return "bg-gradient-" + direction + " from-[" + from + "] to-[" + end + "]";
+    return `linear-gradient(to ${direction}, ${from}, ${end})`;
   };
-
-  const classes = `${sizeClass} ${
-    gradient ? myGradient(gradient) : "bg-" + color
-  } ${className}`;
 
   const getInitials = (name: string) => {
     const names = name.split(" ");
@@ -73,10 +69,22 @@ export const GradientAvatar: React.FC<GradientAvatarProps> = (props) => {
     return hsp > 127.5 ? "black" : "white";
   };
 
+  const classes = `${sizeClass} ${className}`;
+
+  const checkHex = (color: string) => /^#[0-9A-F]{6}$/i.test(color);
+
   return (
     <div
       data-testid="gradient-avatar"
-      className={`rounded-full flex items-center justify-center text-white ${classes}`}
+      className={`rounded-full flex items-center justify-center ${classes}`}
+      style={{
+        ...(gradient && {
+          backgroundImage: myGradient(gradient),
+        }),
+        ...(color && {
+          backgroundColor: checkHex(color) ? color : "#cecece",
+        }),
+      }}
     >
       <span
         style={{
